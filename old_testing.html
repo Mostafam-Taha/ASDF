@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./css/Erorr.css">
+    <title>الأخطاء</title>
+</head>
+<body>
+    <section class="erorr">
+        <!-- حاوية الأخطاء -->
+        <div class="contanier" id="errors-container">
+            <!-- سيتم إضافة الأخطاء هنا -->
+        </div>
+        <div class="plus-section">
+            <div class="plus">
+                <i title="اضافة خطأ" class="fa-solid fa-plus"></i>
+            </div>
+        </div>            
+    </section>
+    <!-- اضافة نوع خطأ جديد -->
+    <section class="new-erorr" style="display: none;">
+        <div class="x-mark">
+            <i class="fa-solid fa-xmark"></i>
+            <i class="fa-solid fa-check"></i>
+        </div>
+        <div class="contanier">
+            <div class="haed">
+                <label>عنوان الخطأ</label>
+                <input type="text" id="error-title" placeholder="عنوان">
+                <textarea id="error-description" placeholder="أكتب وصف الخطأ"></textarea>
+            </div>
+            <div class="file">
+                <label class="custom-file-upload">
+                    رفع ملفات
+                    <input type="file" id="file-upload-button">
+                </label>
+                <div class="plus-option">
+                    <div><i class="fa-solid fa-camera"></i></div>
+                    <div><i class="fa-solid fa-file-pdf"></i></div>
+                    <div><i class="fa-solid fa-note-sticky"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>    
+    <!-- عنصر بلكامل -->
+    <section class="tools-view" style="display: none;">
+        <div class="x-mark">
+            <i class="fa-solid fa-xmark"></i>
+            <i class="fa-solid fa-trash"></i>
+        </div>
+        <div class="contanier">
+            <div class="tools">
+                <input type="text" id="tools-title">
+                <textarea id="tools-description"></textarea>
+            </div>
+            <div class="img-pdf-othar">
+                <img id="tools-image" src="" alt="لا توجد صورة" loading="lazy">
+            </div>
+        </div>
+    </section>
+    <div class="massege-delete" style="display: none;">
+        <div class="contanier">
+            <p>هل انت متاكد من نسح هذا العنصر؟</p>
+            <div class="yes-no">
+                <button id="confirm-delete">نعم</button>
+                <button id="cancel-delete">لا</button>
+            </div>
+        </div>
+    </div>
+    <script src="./js/Erorr.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختيار المواد الدراسية</title>
+    <link rel="stylesheet" href="css/class-schedule.css">
+</head>
+<body>
+    <header>
+        <h1>اختيار المواد الدراسية</h1>
+    </header>
+    <main>
+        <form id="subjects-form">
+            <fieldset>
+                <legend>اختر المواد الدراسية:</legend>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="subjects" value="عربي"> عربي</label>
+                    <label><input type="checkbox" name="subjects" value="رياضة"> رياضة</label>
+                    <label><input type="checkbox" name="subjects" value="فيزياء"> فيزياء</label>
+                    <label><input type="checkbox" name="subjects" value="كيمياء"> كيمياء</label>
+                    <label><input type="checkbox" name="subjects" value="أحياء"> أحياء</label>
+                    <label><input type="checkbox" name="subjects" value="تاريخ"> تاريخ</label>
+                    <label><input type="checkbox" name="subjects" value="جغرافيا"> جغرافيا</label>
+                    <label><input type="checkbox" name="subjects" value="علم نفس"> علم نفس</label>
+                    <label><input type="checkbox" name="subjects" value="فلسفة"> فلسفة</label>
+                </div>
+                <button type="button" id="next-step">انتقال إلى اختيار الإجازة</button>
+            </fieldset>
+        </form>
+        
+        <form id="vacation-form" style="display: none;">
+            <fieldset>
+                <legend>اختر أيام الإجازة:</legend>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="vacation-days" value="السبت"> السبت</label>
+                    <label><input type="checkbox" name="vacation-days" value="الأحد"> الأحد</label>
+                    <label><input type="checkbox" name="vacation-days" value="الاثنين"> الاثنين</label>
+                    <label><input type="checkbox" name="vacation-days" value="الثلاثاء"> الثلاثاء</label>
+                    <label><input type="checkbox" name="vacation-days" value="الأربعاء"> الأربعاء</label>
+                    <label><input type="checkbox" name="vacation-days" value="الخميس"> الخميس</label>
+                    <label><input type="checkbox" name="vacation-days" value="الجمعة"> الجمعة</label>
+                </div>
+                <button type="submit">حفظ وإرسال</button>
+            </fieldset>
+        </form>
+
+        <form id="final-date-form" style="display: none;">
+            <fieldset>
+                <legend>حدد موعد النهائي:</legend>
+                <label for="final-date">اختر اليوم النهائي:</label>
+                <input type="date" id="final-date" name="final-date" required>
+                <button type="submit">إنشاء الجدول</button>
+            </fieldset>
+        </form>
+    </main>
+    <script src="js/class-schedule.js"></script>
+</body>
+</html>

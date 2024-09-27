@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/quiz-test.css">
+    <title>Quiz-2</title>
+</head>
+<body>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="ابحث هنا...">
+    </div>
+    <main class="box">
+        <div class="container">
+            <div class="box-1">
+                <h2><i class="fas fa-flask"></i> الفيزياء</h2>
+                <p>الحركة الاهتزازية</p>
+                <a href="./AR-Quiz/AR-Quiz.html">انطلق</a>
+            </div>
+            <div class="box-1">
+                <h2><i class="fas fa-language"></i>اللغة العربية</h2>
+                <p style="direction:rtl;">نحو: نصب الفعل المضارع</p>
+                <a href="./arbec.html/ar-quiz.html">انطلق</a>
+            </div>
+            <div class="box-1">
+                <h2><i class="fas fa-leaf"></i> الأحياء</h2>
+                <p>التغذية الذاتية</p>
+                <a href="./Quiz.html">انطلق</a>
+            </div>
+            <div class="box-1">
+                <h2><i class="fas fa-dna"></i> الأحياء</h2>
+                <p>تابع التغذية الذاتية</p>
+                <a href="./Bio-quiz/2_452-quiz.html">انطلق</a>
+            </div>
+            <div class="box-1">
+                <h2><i class="fas fa-landmark"></i>التاريخ</h2>
+                <p>حضارة شبه الجزيرة العربية قبل ظهور الإسلام</p>
+                <a href="./Ta_quiz/Ta-1_235.html">انطلق</a>
+            </div>            
+            <div class="box-1">
+                <h2><i class="fas fa-atom"></i>الكيمياء</h2>
+                <p>تطور مفهوم بنية الذرة وطيف الانبعاث للذرات</p>
+                <a href="./Chm_1-253/1-253.html">انطلق</a>
+            </div>  
+            <div class="box-1">
+                <h2><i class="fas fa-globe"></i>الجغرافيا</h2>
+                <p>الجغرافيا التنيمة ومجالاتها</p>
+                <a href="./Go_quiz/1-276.html">انطلق</a>
+            </div>            
+            <div class="box-1">
+                <h2><i class="fas fa-language"></i>اللغة العربية</h2>
+                <p>أدب | المعلقات</p>
+                <a href="./Ar_dars2_quiz/ar-2_quiz.html">انطلق</a>
+            </div>            
+            <div class="box-1">
+                <h2><i class="fas fa-wave-square"></i>الفيزياء</h2>
+                <p>الحركة الموجبة</p>
+                <a href="./Ph_dars2_quiz/ph-2_quiz.html">انطلق</a>
+            </div>            
+            <div class="box-1">
+                <h2><i class="fas fa-language"></i> اللغة العربية</h2>
+                <p>نحو | جزم الفعل المضارع بـ(أدوات الجزم)</p>
+                <a href="./Ar_dars3_quiz/ar-3_quiz.html">انطلق</a>
+            </div>            
+        </div>
+    </main>
+    <script>
+        document.getElementById('searchInput').addEventListener('input', function() {
+            const filter = this.value.toLowerCase();
+            const boxes = document.querySelectorAll('.box-1');
+            
+            boxes.forEach(box => {
+                const h2 = box.querySelector('h2').textContent.toLowerCase();
+                const p = box.querySelector('p').textContent.toLowerCase();
+
+                if (h2.includes(filter) || p.includes(filter)) {
+                    box.style.display = '';
+                } else {
+                    box.style.display = 'none';
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>

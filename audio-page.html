@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحكم في الصوتيات</title>
+    <link rel="stylesheet" href="css/audio-page.css"> <!-- تأكد من ربط CSS الصحيح -->
+</head>
+<body>
+    <h1>تحكم في الصوتيات</h1>
+    
+    <form id="upload-form">
+        <input type="file" id="file-input" accept="audio/*" multiple>
+        <button type="submit">تحميل الصوتيات</button>
+    </form>
+    
+    <div id="audio-list" class="audio-list">
+        <!-- الصوتيات التي تم تحميلها ستظهر هنا -->
+    </div>
+    <div id="timeline" class="timeline">
+        <h2>الخط الزمني للصوتيات</h2>
+        <div id="timeline-items">
+            <!-- العناصر الزمنية ستظهر هنا -->
+        </div>
+    </div>
+    
+
+    <audio id="check-sound" src="Sound/livechat-129007.mp3" preload="auto"></audio> <!-- صوت عند وضع علامة صح -->
+
+    <script src="js/audio-page.js"></script> <!-- تأكد من ربط JS الصحيح -->
+</body>
+</html>

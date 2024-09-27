@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام النقاط</title>
+    <link rel="stylesheet" href="./css/taleb-mujtahid.css"> <!-- رابط ملف CSS -->
+</head>
+<body>
+    <div class="container">
+        <h1>نقاط الطالب</h1>
+        <h2>النقاط الحالية: <span id="current-points">0</span></h2>
+        
+        <div class="code-section">
+            <h3>أدخل الكود لتحصل على نقاط إضافية:</h3>
+            <input type="text" id="promo-code" placeholder="أدخل الكود هنا">
+            <button onclick="redeemCode()">إرسال</button>
+        </div>
+
+        <div class="tasks-section">
+            <h3>المهام المتاحة لكسب النقاط:</h3>
+            <ul id="tasks-list">
+                <!-- سيتم إضافة المهام ديناميكيًا -->
+            </ul>
+        </div>
+
+        <div class="add-task-section">
+            <h3>إضافة مهمة جديدة:</h3>
+            <input type="text" id="new-task-description" placeholder="وصف المهمة">
+            <input type="number" id="new-task-points" placeholder="النقاط" min="1">
+            <button id="add-task-button">إضافة المهمة</button>
+        </div>
+    </div>
+
+    <script src="./js/taleb-mujtahid.js"></script> <!-- رابط ملف JavaScript -->
+</body>
+</html>

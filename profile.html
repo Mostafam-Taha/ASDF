@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <title>الملف الشخصي</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="input-code">
+                <input type="text" id="promo-code" placeholder="أدخل الكود هنا">
+                <button onclick="redeemCode()"><i class="fa-solid fa-check"></i></button>
+            </div>
+            <div class="level-day-profile">
+                <ul>
+                    <li>النقاط <span style="font-weight: bold;" id="current-points">0</span></li>
+                    <li>اليوم <span style="font-weight: bold;">1</span></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="my-profile">
+        <div class="container">
+            <div class="profile-header">
+                <div class="image-name">
+                    <div class="profile-image">
+                        <img src="" alt="Profile Image" id="profile-pic" loading="lazy">
+                        <div class="pan-edit"><i class="fa-solid fa-pen"></i></div>
+                    </div>
+                    <div class="profile-details">
+                        <div id="blockMessage"></div>
+                        <div style="display: flex; flex-direction: row-reverse; text-align: right; margin: 15px;">
+                            <div style="width: 25px; height: 25px; background-color: aliceblue; text-align: center; padding: 3px; border-radius: 50%;"><i id="shareButton" class="fa-solid fa-share"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="description-profile">
+                    <div class="container">
+                        <div class="level-info">
+                            <img id="level-icon" src="./Icon-level/level-1.png" alt="أيقونة المستوى">
+                            <div id="level-name" class="level-profile">مستوى المبتدئ</div>
+                        </div>
+                        <div id="points" class="level-profile">0</div>
+                        <div class="line-level">
+                            <div id="progress-bar" class="progress-bar">
+                                <div id="progress-fill" class="progress-fill"></div>
+                            </div>
+                        </div>
+                        <div id="remaining-points" class="level-profile">النقاط المتبقية للمستوى التالي: 1500</div>
+                    </div>
+                </div>
+            </div>
+            <div class="to-do-list-section">
+                <div id="addTask" class="plus-list"><i class="fa-solid fa-plus"></i></div>
+                <div class="list">
+                    <ul id="tasks-list"></ul>
+                </div>
+            </div>
+            <div class="stis-profile">
+                <h5 style="text-align: right; margin: 1px 5px 0 0;">أحصائيات المهام</h5>
+                <div class="container">
+                    <div class="ciritr">100%</div>
+                    <div class="un-chack-list">المهام الغير مكتملة <span>50%</span></div>
+                    <div class="chack-list">المهام مكتملة <span>0%</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <main class="main-content">
+        <div class="container">
+            <div class="profile-stats">
+                <section id="overview" class="profile-section">
+                    <div class="stat">
+                        <div class="fa-solid">
+                            <i class="fa-solid fa-ellipsis" id="toggle-menu"></i>
+                        </div>
+                        <div id="menu" class="menu hidden">
+                            <ul>
+                                <li><i class="fa-regular fa-folder-open"></i></li>
+                            </ul>
+                        </div>
+                        <div class="stat-value">
+                            <i class="fa-solid fa-question"></i>
+                            <div class="block">
+                                <p id="student-percentage">0%</p>
+                                <p>أداءك</p>
+                            </div>
+                        </div>
+                    </div>                    
+                    <div class="stat">
+                        <div class="fa-solid">
+                            <i class="fa-solid fa-ellipsis" id="toggle-menu2"></i>
+                        </div>
+                        <div id="menu2" class="menu hidden">
+                            <ul>
+                                <li><i class="fa-regular fa-folder-open"></i></li>
+                            </ul>
+                        </div>
+                        <div class="stat-value">
+                            <i class="fa-solid fa-shield"></i>
+                            <div class="block">
+                                <p id="blockCountDisplay">0</p>
+                                <p>عدد الحظورات</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stat">
+                        <div class="fa-solid">
+                            <i class="fa-solid fa-ellipsis" id="toggle-menu3"></i>
+                        </div>
+                        <div id="menu3" class="menu hidden">
+                            <ul>
+                                <a href="Room_Class/Room_Class_1.html"><i class="fa-regular fa-folder-open"></i></a>
+                            </ul>
+                        </div>
+                        <div class="stat-value">
+                            <i class="fa-solid fa-clock"></i>
+                            <div class="block">
+                                <p id="watchLaterCount">0</p>
+                                <p>عدد مشاهدة لاحقًا</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <section id="activiy" class="profile-section">
+        <h2 style="text-align: right; padding: 0 7px;">الاشعارات</h2>
+        <ul class="activity-list">
+            <ul id="notifictions-list">
+                <li class="notification-item">
+                    <div class="p-img">
+                        <img src="img/516ce7c930e539f73ad36ed32fa4f9d7.jpg" alt="Activity User">
+                        <p>نحن سعداء بنضمامك  <a href="#">لساحة العلم</a> نتمني لك رحلة درسية موفقه</p>
+                    </div>
+                <div class="just-fi">
+                    <p id="notification-time"></p>
+                </div>
+                </li>
+            </ul>
+        </ul>
+    </section>
+    <div id="addtolist" class="add-to-list" style="display: none;">
+        <div class="x-mark">
+            <i id="closeAddList" class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="container">
+            <h4>أدخل المهمة</h4>
+            <div class="input">
+                <input type="text" id="new-task-description" placeholder="أدخل المهمة" required>
+                <button id="add-task-button"><i class="fa-solid fa-circle-plus"></i> إضافة</button>
+            </div>
+        </div>
+    </div>
+    <div class="view-account" style="display: none;">
+        <div class="view-flex">
+            <div class="header-acc">
+                <div class="haed-accont">
+                    <div class="name">
+                        <img src="./WhatsApp Image 2024-08-12 at 00.56.07 (3).jpeg" alt="لا توجد صورة" loading="lazy">
+                        <div style="padding: 0 15px;">الاسم</div>
+                    </div>
+                    <div class="data">
+                        <div style="font-size: 12px;">1/8/2024</div>
+                    </div>
+                </div>
+            </div>
+            <div class="line-acc-1"></div>
+            <div class="container">
+                <div class="level">
+                    <div class="level-up">المستوى</div>
+                    <div class="level-xp">0 النقاط</div>
+                </div>
+                <div class="quiztion-par">
+                    <p>أداء_اخر اختبار</p>
+                    <div>0%</div>
+                </div>
+            </div>
+            <div class="line-acc-1"></div>
+            <div class="bottom-acc">
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-solid fa-heart"></i>                            
+                <i class="fa-solid fa-share"></i>
+            </div>
+        </div>
+    </div>
+    <!-- رسالة الحظر -->
+    <div class="overlay hidden" id="banOverlay">
+        <div class="message-block">
+            <div class="key-block">
+                <h2> <i class="fa-solid fa-triangle-exclamation"></i> رسالة حظر دائم</h2>
+                <p>مرحبًا يا <span id="userName"></span>، لقد لاحظنا نشاطًا غير مرغوب فيه بهذا الكود <span id="userCode"></span>. تم تسجيل الدخول بهذا الكود عدة مرات وهو يعمل لفترات طويلة على مدار اليوم. يُرجى التواصل مع خدمة عملاء ساحة العلم لحل هذه المشكلة.</p>
+                <p>شكرًا لك، كان معك فريق ساحة العلم.</p>
+            </div>
+        </div>
+    </div>
+    <!-- عنصر الخلفية -->
+    <div id="background" class="background"></div>
+
+    <!-- عنصر علامة التحميل -->
+    <div id="loader" class="loader"></div>
+
+    <!-- محتوى الصفحة -->
+    <div id="content" style="display: none;">
+        <!-- محتوى الموقع هنا -->
+    </div>
+    <div class="happ">
+        <div class="container" id="box-container" style="display:none;">
+            <div class="icon">
+                <img id="box-icon" src="" alt="صندوق الحظ">
+            </div>
+            <div class="open-lev">
+                <button id="open-box-btn">أفتح الصندوق الأن</button>
+            </div>
+            <div id="reward-message" style="display:none;">
+                <p>لقد حصلت على <span id="reward-points"></span> نقطة، وشهادة إتمام المستوى، ودعوة تذكارية!</p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="task-message" style="display:none;">
+        <p>أتممت مهمة بنسبة <span id="student-percentage">0%</span>. أكمل المهمة للانتقال إلى المستوى الجديد!</p>
+    </div>
+    
+    <div class="totle-pacg">
+        <div class="open-pakg">
+            <div class="icon">
+                <img src="" alt="">
+            </div>
+            <div class="bog">
+                <div class="happiy"></div>
+            </div>
+        </div>
+    </div>
+    <script src="js/profile.js"></script>
+    <script src="js/./taleb-mujtahid.js"></script>
+    <script src="js/light-dark-mode-2.js"></script>
+    <script src="js/./showProfile.js"></script>
+    <script src="js/massage-block.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const percentage = localStorage.getItem('studentPercentage') || '0'; // الحصول على النسبة المئوية من localStorage
+            document.getElementById('student-percentage').textContent = `${percentage}%`;
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let blockCount = localStorage.getItem('blockCount') ? parseInt(localStorage.getItem('blockCount')) : 0;
+            document.getElementById('blockCountDisplay').innerText = `${blockCount}`;
+        });
+    </script>
+    <script>
+        // عند تحميل الصفحة، احصل على عدد الفيديوهات المحفوظة في "مشاهدة لاحقًا"
+        window.onload = function() {
+            // جلب الفيديوهات المخزنة في LocalStorage
+            var savedVideos = JSON.parse(localStorage.getItem('watchLaterVideos')) || [];
+            
+            // الحصول على عدد الفيديوهات
+            var videoCount = savedVideos.length;
+        
+            // تحديث عدد الفيديوهات في العنصر
+            document.getElementById('watchLaterCount').textContent = videoCount;
+        };
+        </script>
+    </body>
+</html>

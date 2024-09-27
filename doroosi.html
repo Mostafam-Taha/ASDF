@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/doroosi.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <title>Doroosi</title>
+    <script>
+        // Check if a class is already selected
+        window.onload = function() {
+            const selectedClass = localStorage.getItem('selectedClass');
+            if (selectedClass) {
+                window.location.href = selectedClass;
+            }
+        }
+
+        // Function to store selected class and redirect
+        function selectClass(classPath) {
+            localStorage.setItem('selectedClass', classPath);
+            window.location.href = classPath;
+        }
+        window.onload = function() {
+            const selectedClass = localStorage.getItem('selectedClass');
+            if (selectedClass) {
+                window.location.href = selectedClass;
+            }
+        }
+
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // تحقق من حالة تسجيل الدخول
+            if (localStorage.getItem('loggedIn') !== 'true') {
+                // إذا لم يكن المستخدم مسجلاً دخوله، قم بتوجيهه إلى صفحة تسجيل الدخول
+                window.location.href = 'login.html';
+            }
+        });
+
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+                // إخفاء الخلفية وعلامة التحميل وعرض المحتوى بعد تحميل الصفحة
+                const loader = document.getElementById('loader');
+                const background = document.getElementById('background');
+                const content = document.getElementById('content');
+
+                // عندما يتم تحميل كل العناصر
+                window.addEventListener('load', function() {
+                    loader.style.display = 'none';
+                    background.style.display = 'none';
+                    content.style.display = 'block';
+                });
+            });
+
+    </script>
+</head>
+<body>
+    <main class="main">
+        <div class="title-section">
+            <h2 style="max-width: 800px;">اكتشف قوة العلم التي تفتح أمامك عوالم جديدة، وتمنحك القدرة على تحقيق المستحيل.</h2>
+            <a href="#doroosi" class="bold-link">إبدأ</a>
+        </div>
+    </main>
+    <section id="doroosi" class="doroosi">
+        <div class="contanier">
+            <div class="doroosi-div" onclick="selectClass('Room_Class/Room_Class_1.html')">
+                <div class="item">
+                    <i class="fa-solid fa-1"></i>
+                </div>
+                <div class="matrial">
+                    <h2 style="margin: 5px; font-size: 15px;">الصف الاول الثانوي</h2>
+                </div>
+            </div>
+            <div class="doroosi-div" onclick="selectClass('Room_Class/Room_Class_2.html')">
+                <div class="item">
+                    <i class="fa-solid fa-2"></i>
+                </div>
+                <div class="matrial">
+                    <h2 style="margin: 5px; font-size: 15px">الصف الثاني الثانوي</h2>
+                </div>
+            </div>
+        </div>
+    </section> 
+    <!-- عنصر الخلفية -->
+    <div id="background" class="background"></div>
+
+    <!-- عنصر علامة التحميل -->
+    <div id="loader" class="loader"></div>
+
+    <!-- محتوى الصفحة -->
+    <div id="content" style="display: none;">
+        <!-- محتوى الموقع هنا -->
+    </div>
+</body>
+</html>

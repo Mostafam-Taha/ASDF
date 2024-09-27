@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة اختبارات دراسية</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/stats.css">
+    <link rel="stylesheet" href="./css/light-dark-mode.css">
+</head>
+<body>
+    <div id="orientationMessage">يرجى قلب الهاتف لإجراء الاختبار بشكل صحيح.</div>
+    <div id="quiz-container">
+        <div id="timer" style="font-weight: bold; margin-top: 10px;"></div>
+        <h1>اختبار دراسي</h1>
+        <div class="line"></div>
+        <div class="line-2"></div>
+        <div class="nema-quiz" id="testNameSection">
+            <p>يرجى فى كل مره يبدأ الاختبار يتم تسميه غير القبلها يعنى الاوله (إسم المادة -1) الاختبار التالى يكون (إسم المادة -2 ) مثلًا</p>
+            <input type="text" id="testName" placeholder="أدخل اسم الاختبار" value="الاحياء-" required>
+            <button class="btn" id="startTest">بدء الاختبار</button>
+        </div>
+        <div class="test-quiz" id="quiz" style="display: none;"></div>
+        <button id="submit" style="display: none;">إرسال</button>
+        <div id="blockMessage" style="color: red; font-weight: bold; display: none;"></div>
+    </div>
+    <div id="progress" style="font-weight: bold; color: rgb(122, 122, 122); margin-top: 10px;"></div>
+
+    <!-- أيقونة الإعدادات -->
+    <a id="settings-icon" href="#" title="الإعدادات">
+        <i class="fas fa-cog"></i>
+    </a>
+
+    <!-- قسم الإعدادات -->
+    <div id="settings-container">
+        <h2>إعدادات</h2>
+        <div class="setting-option">
+            <label><input type="radio" name="theme" value="system" checked> النظام (تلقائي)</label>
+        </div>
+        <div class="setting-option">
+            <label><input type="radio" name="theme" value="light"> الوضع الفاتح</label>
+        </div>
+        <div class="setting-option">
+            <label><input type="radio" name="theme" value="dark"> الوضع المظلم</label>
+        </div>
+    </div>
+
+    <!-- أيقونة فتح الشات -->
+    <div id="chat-icon" class="chat-icon">
+        <i class="fas fa-shield-alt"></i>
+    </div>
+    
+    <!-- نافذة الشات -->
+    <div id="chat-container">
+        <div id="chat-header">شات المراقبة</div>
+        <div id="chat-body"></div>
+        <div id="chat-footer">
+            <input type="text" id="message-input" placeholder="اكتب رسالة...">
+            <button id="send-button">إرسال</button>
+        </div>
+    </div>
+    <script src="js/quiz-test.js"></script>
+    <script src="js/light-dark-mode.js"></script>
+    <script src="js/confirm-leave.js"></script>
+</body>
+</html>

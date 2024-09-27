@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/tec-login-pro.css">
+    <title>تسجيل الدخول</title>
+</head>
+<body>
+    <main>
+        <div class="recro"></div>
+    </main>
+    <section class="name-section">
+        <div class="contanier">
+            <div class="icon">
+                <div class=img-icon>
+                    <div><i class="fa-solid fa-chalkboard-user"></i></div>
+                    <h2>مرحبًا بك أستاذنا الفاضل في ساحة العلم</h2>
+                    <p>سعداء بانضمامك إلى ساحة العلم. نتمنى لك تجربة تدريس ناجحة ومثمرة.👋</p>
+                </div>
+            </div>
+            <!-- full name -->
+            <div class="form-section">
+                <form class="form-send-mail" action="https://usebasin.com/f/120f1a205de6" method="POST">
+                    <div class="griy">
+                        <div>
+                            <label for="full-name">الاسم</label>
+                            <br>
+                            <input type="text" id="name" name="name" placeholder="أدخل الاسم كامل" required>
+                        </div>                  
+                        <!-- User Name -->
+                        <div>
+                            <label for="username">اسم المستخدم</label>
+                            <br>
+                            <input type="text" id="username" name="username" placeholder="اسم المستخدم" required >
+                        </div>
+                        <!-- Phone -->
+                        <div>
+                            <label for="phone">رقم الهاتف</label>
+                            <br>
+                            <input type="tel" id="phone" name="phone" placeholder="رقم الهاتف (اختياري)" style="text-align: right;">
+                        </div>
+                        <!-- Gmail -->
+                        <div>
+                            <label for="email"> البريد الإلكتروني </label>
+                            <br>
+                            <input type="email" id="email" name="email" placeholder="البريد الإلكتروني" required>
+                        </div>
+                        <div class="male-or-female" style="display: flex; flex-direction: column; justify-content: center;">
+                            <!-- Male -->
+                            <div>
+                                <input type="radio" id="male" name="gender" value="male">
+                                <label for="male">ذكر</label>
+                            </div>
+                            <!-- Female -->
+                            <div>
+                                <input type="radio" id="female" name="gender" value="female">
+                                <label for="female">أنثى</label>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="submit" value="التالي">
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // جمع البيانات من النموذج
+        const formData = {
+            name: document.getElementById('name').value,
+            username: document.getElementById('username').value,
+            phone: document.getElementById('phone').value,
+            email: document.getElementById('email').value,
+            gender: document.querySelector('input[name="gender"]:checked') ? document.querySelector('input[name="gender"]:checked').value : '',
+            lessonName: document.getElementById('lesson-name').value // إضافة اسم الدرس
+        };
+        
+        // حفظ البيانات في Local Storage
+        localStorage.setItem('userData', JSON.stringify(formData));
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أنظمة العضوية</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/low-time.css">
+
+</head>
+<body>
+    <div class="membership-container">
+        <h1>أنظمة العضوية</h1>
+        <div class="membership-card" id="excellence">
+            <h2>عضوية دفعة التميز</h2>
+            <p><i class="fas fa-check"></i> ربط حسابك بمرآة المؤمن</p>
+            <p><i class="fas fa-check"></i> ربط انجازاتك بدفعة ألاخلاء</p>
+            <p><i class="fas fa-check"></i> التحكم الكامل في موقع</p>
+            <p><i class="fas fa-check"></i> استخدام الموقع الى التابلت الثانوية</p>
+            <p><i class="fas fa-check"></i> الوصول الكامل جميع ملفات الموقع</p>
+            <p><i class="fas fa-check"></i> الدخول في امتحانات  مثل اخر السنة</p>
+            <p><i class="fas fa-check"></i> عرض جميع الاحصائيات الخاصة بك</p>
+            <p><i class="fas fa-check"></i> فتح صفحة العلم الشرعي في مرأة المؤمن</p>
+            <p><i class="fas fa-check"></i> مدة 3 سنوات</p>
+            <p class="price">السعر :49 جنية</p>
+            <button onclick="showSubscriptionForm()">اشترك الآن</button>
+        </div>
+        <div class="membership-card" id="superiority">
+            <h2>عضوية دفعة التفوق</h2> 
+            <p><i class="fas fa-check"></i> ربط حسابك بمرآة المؤمن</p>
+            <p><i class="fas fa-check"></i> ربط انجازاتك بدفعة ألاخلاء</p>
+            <p><i class="fas fa-check"></i> استخدام الموقع الى التابلت الثانوية</p>
+            <p><i class="fas fa-check"></i> الدخول في امتحانات مثل اخر السنة</p>
+            <p><i class="fas fa-check"></i> عرض جميع الاحصائيات الخاصة بك</p>
+            <p><i class="fas fa-check"></i> فتح صفحة العلم الشرعي في مرأة المؤمن</p> 
+            <p><i class="fas fa-check"></i> مدة 3 سنوات</p>
+            <p class="price">الخاصة بدفعة المساندة و العياط</p>
+            <button onclick="showSuperioritySubscriptionForm()">اشترك الآن</button>
+        </div>
+
+        <div class="membership-card" id="knowledge">
+            <h2>عضوية دفعة ساحة العلم</h2>
+            <p><i class="fas fa-check"></i> ربط انجازاتك بدفعة ألاخلاء</p>
+            <p><i class="fas fa-check"></i> استخدام الموقع الى التابلت الثانوية</p>
+            <p><i class="fas fa-check"></i> عرض جميع الاحصائيات الخاصة بك</p>
+            <p><i class="fas fa-check"></i> فتح صفحة العلم الشرعي في مرأة المؤمن</p> 
+            <p><i class="fas fa-check"></i> مدة 3 سنوات</p>
+            <!-- <button onclick="subscribe('knowledge')">اشترك الآن</button> -->
+             <a href="./login.html">أشترك الآن</a>
+        </div>
+    </div>
+
+    <div id="subscriptionFormContainer" class="membership-container">
+        <h1>أنظمة العضوية</h1>
+        <form id="subscriptionForm">
+            <div class="membership-card" id="excellence">
+                <h2>عضوية دفعة التميز</h2>
+                <p>من خلال الكود الخاص بك سيتم حفظ جيمع البيانات من خلاله </p>
+                <input type="text" id="fullName" placeholder="الاسم الثلاثي" required>
+                <input type="email" id="email" placeholder="البريد الإلكتروني" required>
+                <input type="text" id="activationCode" placeholder="الرمز التفعيلي" required>
+                <input type="tel" id="phoneNumber" placeholder="رقم الهاتف" required>
+                <p class="price">السعر :49 جنية</p>
+                <button type="submit">تسجيل</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- قسم نموذج الاشتراك لعضوية دفعة التفوق -->
+    <div id="superioritySubscriptionFormContainer" class="membership-container" style="display: none;">
+        <h1>نموذج الاشتراك لعضوية دفعة التفوق</h1>
+        <form id="superioritySubscriptionForm" onsubmit="handleSubscription(event)">
+            <input class="text-s" type="text" id="fullName" placeholder="الاسم الثلاثي" required>
+            <input class="text-s" type="email" id="email" placeholder="البريد الإلكتروني" required>
+            <button type="submit">تسجيل</button>
+        </form>
+    </div>
+
+    <script src="js/low-time.js"></script>
+    <script src="js/soper-maed.js"></script>
+</body>
+</html>
